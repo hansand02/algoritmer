@@ -1,0 +1,12 @@
+\begin{algorithm}[H]
+  \KwIn{En streng $s$ og et positivt heltall $N$}
+  \KwOut{Et heltall $h$ slik at $0 \leq h < N$}
+  \proc{$\HashString(s, N)$}{
+    $h \gets 0$\;
+    \For{every letter $c$ in $s$}{
+      $h \gets 31 \cdot h + \charToInt(c)$\;
+    }
+    \Return $h \bmod N$
+  }
+  \caption{En god hashfunksjon på strenger}
+\end{algorithm}

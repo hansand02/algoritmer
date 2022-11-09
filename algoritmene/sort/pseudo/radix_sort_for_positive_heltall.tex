@@ -1,0 +1,12 @@
+\begin{algorithm}[H]
+  \KwIn{Et array $\A$ med $n$ positive heltall}
+  \KwOut{Et \emph{sortert} array med de samme $n$ positive heltallene}
+  \proc{$\RadixSort(\A)$}{
+    $d \gets$ antall siffer i det største tallet \;
+    \For{$i \gets d$ \KwDownTo $0$}{
+      $\A \gets \BucketSort{\A}$ etter det $i$te sifferet
+    }
+    \Return \A
+  }
+  \caption{Radix sort for positive heltall}
+\end{algorithm}

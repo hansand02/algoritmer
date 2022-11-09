@@ -1,0 +1,13 @@
+\begin{algorithm}[H]
+  \KwIn{Et array $\A$ og et element $x$}
+  \KwOut{Hvis $x$ er i arrayet $\A$, returner \KwTrue ellers \KwFalse}
+  \proc{$\Search(\A, x)$}{
+    \For{$i \gets 0$ \KwTo $\abs{\A} - 1$}{
+      \uIf{$\A{i} = x$}{
+        \Return \KwTrue
+      }
+    }
+    \Return \KwFalse
+  }
+  \caption{Rett frem søk}
+\end{algorithm}

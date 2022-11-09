@@ -1,0 +1,11 @@
+\begin{algorithm}[H]
+  \KwIn{En node $v$}
+  \KwOut{Returner høydeforskjellen på $v$ sitt venstre- og høyrebarn}
+  \proc{$\BalanceFactor(v)$}{
+    \uIf{$v = \Null$} {
+      \Return $0$
+    }
+    \Return $\HEIGHT(v.\Left) - \HEIGHT(v.\Right)$
+  }
+  \caption{Balansefaktoren av en node}
+\end{algorithm}

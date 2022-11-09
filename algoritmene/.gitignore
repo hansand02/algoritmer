@@ -1,0 +1,5 @@
+.DS_Store
+/target
+/.compile_dir
+*.pdf
+*.dvi

@@ -1,0 +1,20 @@
+\begin{algorithm}[H]
+  \KwIn{En node $v$}
+  \KwOut{En balansert node}
+  \proc{$\Balance(v)$}{
+    \uIf{$\BalanceFactor(v) < -1$} {
+      \uIf{$\BalanceFactor(v.right) > 0$} {
+        $v.\Right = \RightRotate(v.\Right)$
+      }
+      \Return $\LeftRotate(v)$
+    }
+    \uIf{$\BalanceFactor(v) > 1$} {
+      \uIf{$\BalanceFactor(v.left) < 0$} {
+        $v.\Left = \LeftRotate(v.\Left)$
+      }
+      \Return $\RightRotate(v)$
+    }
+    \Return $v$
+  }
+  \caption{Balansering av et AVL-tre}
+\end{algorithm}

@@ -1,0 +1,22 @@
+\begin{algorithm}[H]
+  \KwIn{En vektet graf $G = (V, E)$ med vektfunksjon $w$ og en startnode $s$}
+  \KwOut{Et map \var{dist} som angir korteste vei fra $s$ til alle noder i $G$}
+  \proc{\Dijkstra{$G$, $s$}}{
+    $\var{dist} \gets $ empty map with $\infty$ as default \;
+    $\var{queue} \gets$ singleton priority queue containing $s$ with priority $0$\;
+    $\var{dist}[s] \gets 0$\;
+    \;
+    \While{\var{queue} is not empty}{
+      $u \gets \RemoveMin{\var{queue}}$ where \var{cost} is its priority\;
+      \For{$(u, v) \in E$}{
+        $c \gets \var{cost} + w(u, v)$\;
+        \If{c < \var{dist}[v]}{
+          $\var{dist}[v] \gets c$\;
+          \Insert{\var{queue}, $v$} with priority $c$\;
+        }
+      }
+    }
+    \Return \var{dist}
+  }
+  \caption{Dijkstras algoritme for korteste stier}
+\end{algorithm}

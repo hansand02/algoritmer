@@ -1,0 +1,20 @@
+\begin{algorithm}[H]
+  \KwIn{En vektet, urettet graf $G = (V, E)$ med vektfunksjon $w$}
+  \KwOut{Et minimalt spenntre for $G$}
+  \proc{\Prim{$G$}}{
+    $\var{queue} \gets$ empty priority queue\;
+    $\var{parents} \gets$ empty map\;
+    \Insert{\var{queue}, $(\Null, s)$} with priority $0$, for some arbitrary $s \in V$\;
+    \While{\var{queue} is not empty}{
+      $(p, u) \gets \RemoveMin{\var{queue}}$\;
+      \If{$u \not\in \var{parents}$}{
+        $\var{parents}[u] \gets p$\;
+        \For{$(u, v) \in E$}{
+          \Insert{\var{queue}, $(u, v)$} with priority $w(u,v)$\;
+        }
+      }
+    }
+    \Return \var{parents}
+  }
+  \caption{Prims algoritme for minimale spenntrær}
+\end{algorithm}

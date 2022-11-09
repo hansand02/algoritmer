@@ -1,0 +1,32 @@
+\begin{algorithm}[H]
+  \KwIn{To sorterte arrayer $\Aone$ og $\Atwo$ og et array $\A$,
+    der $\abs{\Aone} + \abs{\Atwo} = \abs{\A} = n$}
+  \KwOut{Et sortert array $\A$ med elementene fra $\Aone$ og $\Atwo$}
+  \proc{$\Merge(\Aone, \Atwo, \A)$}{
+    $i \gets 0$ \;
+    $j \gets 0$ \;
+    \;
+    \While{$i < \abs{\Aone}$ \And $j < \abs{\Atwo}$}{
+      \eIf{$\Aone{i} < \Atwo{j}$}{
+        $\A{i + j} \gets \Aone{i}$ \;
+        $i \gets i + 1$
+      }{
+        $\A{i + j} \gets \Atwo{j}$ \;
+        $j \gets j + 1$
+      }
+    }
+    \;
+    \While{$i < \abs{\Aone}$}{
+      $\A{i + j} \gets \Aone{i}$ \;
+      $i \gets i + 1$
+    }
+    \;
+    \While{$j < \abs{\Atwo}$}{
+      $\A{i + j} \gets \Atwo{j}$ \;
+      $j \gets j + 1$
+    }
+    \;
+    \Return $\A$
+  }
+  \caption{Sortert fletting av to arrayer}
+\end{algorithm}

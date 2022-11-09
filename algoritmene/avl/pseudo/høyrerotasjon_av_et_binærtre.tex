@@ -1,0 +1,17 @@
+\begin{algorithm}[H]
+  \KwIn{En node $z$}
+  \KwOut{Roter treet til høyre, slik at $y$ blir den nye roten}
+  \proc{$\RightRotate(z)$}{
+    $y \gets z.\Left$ \;
+    $T_2 \gets y.\Right$ \;
+    \;
+    $y.\Right \gets z$ \;
+    $z.\Left \gets T_2$ \;
+    \;
+    $z.\Height \gets 1 + max(\HEIGHT(z.\Left), \HEIGHT(z.\Right))$ \;
+    $y.\Height \gets 1 + max(\HEIGHT(y.\Left), \HEIGHT(y.\Right))$ \;
+    \;
+    \Return $y$
+  }
+  \caption{Høyrerotasjon av et Binærtre}
+\end{algorithm}

@@ -1,0 +1,14 @@
+\begin{algorithm}[H]
+  \KwIn{Et array $\A$ med $n$ elementer}
+  \KwOut{Et \emph{sortert} array med de samme $n$ elementene}
+  \proc{$\BubbleSort(\A)$}{
+    \For{$i \gets 0$ \KwTo $n - 2$}{
+      \For{$j \gets 0$ \KwTo $n - i - 2$}{
+        \uIf{$\A{j} > \A{j + 1}$}{
+          $\A{j}, \A{j + 1} \gets \A{j + 1}, \A{j}$
+        }
+      }
+    }
+  }
+  \caption{Bubble sort}
+\end{algorithm}

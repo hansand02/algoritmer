@@ -1,0 +1,18 @@
+\begin{algorithm}[H]
+  \KwIn{En mengde $C$ med par $(s, f)$ der $s$ er et symbol og $f$ er en frekvens}
+  \KwOut{Et Huffman-tre}
+  \proc{$\Huffman(C)$}{
+    $Q \gets $ \New \PriorityQueue \;
+    \For{$(s, f) \in C$}{
+      $\Insert(Q, \New\ \Node(s, f, \Null, \Null))$
+    }
+    \While{$\Size(Q) > 1$}{
+      $v_1 \gets RemoveMin(Q)$ \;
+      $v_2 \gets RemoveMin(Q)$ \;
+      $f \gets v_1.\Freq + v_2.\Freq$ \;
+      $Insert(Q, \New\ \Node(\Null, f, v_1, v_2))$
+    }
+    \Return $\RemoveMin(Q)$
+  }
+  \caption{Bygge Huffman trær}
+\end{algorithm}

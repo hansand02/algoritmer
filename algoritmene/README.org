@@ -1,0 +1,69 @@
+#+TITLE: Algoritmer fra pensum i IN2010
+
+Her finner du alle algoritmene som dekkes i pensum av IN2010.
+
+* Søk
+  [[./søk/pseudo/rett_frem_søk.svg]]
+  [[./søk/pseudo/binærsøk.svg]]
+
+* Trær
+  [[./trær/pseudo/finn_dybden_av_en_gitt_node.svg]]
+  [[./trær/pseudo/finn_høyden_av_en_gitt_node.svg]]
+  [[./trær/pseudo/preorder_traversering.svg]]
+  [[./trær/pseudo/postorder_traversering.svg]]
+
+* Binære søketrær
+  [[./bst/pseudo/innsetting_i_et_binært_søketre.svg]]
+  [[./bst/pseudo/oppslag_i_et_binært_søketre.svg]]
+  [[./bst/pseudo/finn_minste_node.svg]]
+  [[./bst/pseudo/slett_en_node_i_et_binært_søketre.svg]]
+
+* AVL trær
+  [[./avl/pseudo/venstrerotasjon_av_et_binærtre.svg]]
+  [[./avl/pseudo/høyrerotasjon_av_et_binærtre.svg]]
+  [[./avl/pseudo/balansefaktoren_av_en_node.svg]]
+  [[./avl/pseudo/balansering_av_et_avl-tre.svg]]
+  [[./avl/pseudo/innsetting_i_et_avl-tre.svg]]
+  [[./avl/pseudo/sletting_i_et_avl-tre.svg]]
+
+* Heap
+  [[./heap/pseudo/innsetting_i_heap.svg]]
+  [[./heap/pseudo/fjerning_av_minste_element_fra_heap.svg]]
+  [[./heap/pseudo/bygge_huffman_trær.svg]]
+
+* Grafer
+  [[./graf/pseudo/rekursivt_dybde-først_søk.svg]]
+  [[./graf/pseudo/fullt_rekursivt_dybde-først_søk.svg]]
+  [[./graf/pseudo/iterativt_dybde-først_søk.svg]]
+  [[./graf/pseudo/fullt_iterativt_dybde-først_søk.svg]]
+  [[./graf/pseudo/bredde-først_søk.svg]]
+  [[./graf/pseudo/fullt_bredde-først_søk.svg]]
+  [[./graf/pseudo/topologisk_sortering.svg]]
+  [[./graf/pseudo/topologisk_sortering_ved_dfs.svg]]
+  [[./graf/pseudo/dijkstras_algoritme_for_korteste_stier.svg]]
+  [[./graf/pseudo/prims_algoritme_for_minimale_spenntrær.svg]]
+  [[./graf/pseudo/naiv_algoritme_for_å_sjekke_bikonnektivitet.svg]]
+  [[./graf/pseudo/finn_alle_seperasjonsnoder_i_en_sammenhengende_graf.svg]]
+  [[./graf/pseudo/er_grafen_bikonnektiv.svg]]
+  [[./graf/pseudo/reverser_en_gitt_graf.svg]]
+  [[./graf/pseudo/finn_de_sterkt_sammenhengende_komponenetene_av_en_graf.svg]]
+
+* Sortering
+  [[./sort/pseudo/bubble_sort.svg]]
+  [[./sort/pseudo/selection_sort.svg]]
+  [[./sort/pseudo/insertion_sort.svg]]
+  [[./sort/pseudo/hjelpeprosedyre_for_å_bygge_en_max-heap.svg]]
+  [[./sort/pseudo/bygg_en_max-heap.svg]]
+  [[./sort/pseudo/heapsort.svg]]
+  [[./sort/pseudo/sortert_fletting_av_to_arrayer.svg]]
+  [[./sort/pseudo/merge_sort.svg]]
+  [[./sort/pseudo/partition.svg]]
+  [[./sort/pseudo/quicksort.svg]]
+  [[./sort/pseudo/bucket_sort.svg]]
+  [[./sort/pseudo/radix_sort_for_positive_heltall.svg]]
+
+* Hashing
+  [[./hash/pseudo/en_inkonsistent_hashfunksjon.svg]]
+  [[./hash/pseudo/en_dårlig_distribuert_hashfunksjon.svg]]
+  [[./hash/pseudo/en_litt_dårlig_hashfunksjon_på_strenger.svg]]
+  [[./hash/pseudo/en_god_hashfunksjon_på_strenger.svg]]

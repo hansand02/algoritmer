@@ -1,0 +1,23 @@
+\begin{algorithm}[H]
+  \KwIn{Et array $\A$ som representerer en heap med $n$ elementer}
+  \KwOut{Et array som representerer en heap der minste verdi er fjernet}
+  \proc{$\RemoveMin(\A)$}{
+    $x \gets \A{0}$ \;
+    $\A{0} \gets \A{n-1}$ \;
+    $i \gets 0$ \;
+    \While{$2i+2 < n-1$}{
+      $j \gets $ \llIf{$\A{2i+1} \leq \A{2i+2}$}{$2i+1$} \llElse{$2i+2$} \;
+      \uIf{$\A{j} \leq \A{i}$}{
+        $\A{i}, \A{j} \gets \A{j}, \A{i}$ \;
+        $i \gets j$ \;
+        \Continue
+      }
+      \Break
+    }
+    \uIf{$2i+1 < n-1$ \And $\A{2i+1} \leq \A{i}$}{
+      $\A{i}, \A{2i+1} \gets \A{2i+1}, \A{i}$ \;
+    }
+    \Return $x$
+  }
+  \caption{Fjerning av minste element fra heap}
+\end{algorithm}

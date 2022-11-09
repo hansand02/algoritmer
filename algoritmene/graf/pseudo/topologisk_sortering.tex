@@ -1,0 +1,28 @@
+\begin{algorithm}[H]
+  \KwIn{En rettet graf $G = (V, E)$}
+  \KwOut{En topologisk ordning av nodene i $G$}
+  \proc{\TopSort{$G$}}{
+    $\var{stack} \gets$ empty stack\;
+    $\var{output} \gets$ empty list\;
+    \For{$v \in V$}{
+      \If{indegree of $v$ is $0$}{
+        $\var{stack}.\Push{v}$\;
+      }
+    }
+    \While{$\var{stack}$ is not empty}{
+      $u \gets \var{stack}.\Pop{}$\;
+      append $u$ to \var{output}\;
+      \For{$(u, v) \in E$}{
+        remove $u$ from the incoming edges of $v$\;
+        \If{indegree of $v$ is $0$}{
+          add $v$ to $\var{stack}$\;
+        }
+      }
+    }
+    \If{$\abs{\var{output}} < \abs{V}$}{
+      \Error $G$ contains a cycle and cannot be topologically ordered
+    }
+    \Return \var{output}
+  }
+  \caption{Topologisk sortering}
+\end{algorithm}

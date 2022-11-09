@@ -1,0 +1,14 @@
+\begin{algorithm}[H]
+  \KwIn{Et array $\A$ med $n$ elementer, $low$ og $high$ er indekser}
+  \KwOut{Et \emph{sortert} array med de samme $n$ elementene}
+  \proc{$\Quicksort(\A, low, high)$}{
+    \uIf{$low \geq high$}{
+      \Return $\A$
+    }
+    $p \gets \Partition(\A, low, high)$\;
+    $\Quicksort{\A, low, p - 1}$ \;
+    $\Quicksort{\A, p + 1, high}$ \;
+    \Return \A
+  }
+  \caption{Quicksort}
+\end{algorithm}

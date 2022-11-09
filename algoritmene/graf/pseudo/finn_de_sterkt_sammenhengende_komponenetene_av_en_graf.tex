@@ -1,0 +1,21 @@
+\begin{algorithm}[H]
+  \KwIn{En rettet graf $G = (V, E)$}
+  \KwOut{Returner de sterkt sammenhengende komponenetene til $G$}
+  \proc{\SCC{$G$}}{
+    $\var{stack} \gets \DFSTopSort{G}$ \;
+    $G^{-1} \gets \ReverseGraph{G}$ \;
+    $\var{visited} \gets$ empty set\;
+    $\var{components} \gets$ empty set\;
+
+    \While{\var{stack} is not empty}{
+      $u \gets \var{stack}.\Pop{}$ \;
+      \If{$u \not\in \var{visited}$}{
+        $\var{component} \gets $ empty set\;
+        \DFSVisit{$G^{-1}$, $u$, \var{visited}, \var{component}}\;
+        add \var{component} to \var{components}\;
+      }
+    }
+    \Return \var{components}
+  }
+  \caption{Finn de sterkt sammenhengende komponenetene av en graf}
+\end{algorithm}

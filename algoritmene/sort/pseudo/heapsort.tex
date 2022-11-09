@@ -1,0 +1,12 @@
+\begin{algorithm}[H]
+  \KwIn{Et array $\A$ med $n$ elementer}
+  \KwOut{Et \emph{sortert} array med de samme $n$ elementene}
+  \proc{$\HeapSort(\A)$}{
+    $\BuildMaxHeap(\A, n)$\;
+    \For{$i \gets n-1$ \KwDownTo $0$}{
+      $\A{0}, \A{i} \gets \A{i}, \A{0}$\;
+      $\BubbleDown(\A, 0, i)$
+    }
+  }
+  \caption{Heapsort}
+\end{algorithm}

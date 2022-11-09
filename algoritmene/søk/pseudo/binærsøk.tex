@@ -1,0 +1,22 @@
+\begin{algorithm}[H]
+  \KwIn{Et ordnet array $\A$ og et element $x$}
+  \KwOut{Hvis $x$ er i arrayet $\A$, returner \KwTrue ellers \KwFalse}
+  \proc{$\BinarySearch(\A, x)$}{
+    $\low \gets 0$ \;
+    $\high \gets \abs{\A} - 1$ \;
+    \While{$\low \leq \high$}{
+      $i \gets \lfloor\frac{\low + \high}{2}\rfloor$ \;
+      \uIf{$\A{i} = x$}{
+        \Return \KwTrue
+      }
+      \uElseIf{$\A{i} < x$}{
+        $\low \gets i + 1$
+      }
+      \uElseIf{$\A{i} > x$}{
+        $\high \gets i - 1$
+      }
+    }
+    \Return \KwFalse
+  }
+  \caption{Binærsøk}
+\end{algorithm}
